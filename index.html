@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraíso Azul - Centro Turístico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+        :root {
+            --primary: #0f4c81;
+            --secondary: #f4f1ea;
+            --accent: #d4a373;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1544124499-58912cbddaad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-[#fcfcfc] text-gray-800">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-blue-900 tracking-tighter italic">PARAÍSO AZUL</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-medium">
+                        <a href="#inicio" class="nav-link px-3 py-2 text-sm uppercase tracking-wider">Inicio</a>
+                        <a href="#experiencias" class="nav-link px-3 py-2 text-sm uppercase tracking-wider">Experiencias</a>
+                        <a href="#servicios" class="nav-link px-3 py-2 text-sm uppercase tracking-wider">Servicios</a>
+                        <a href="#contacto" class="bg-blue-900 text-white px-6 py-2 rounded-full text-sm uppercase tracking-wider hover:bg-blue-800 transition shadow-lg">Reservar Ahora</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4">
+            <a href="#inicio" class="block py-2 text-base font-medium text-gray-700">Inicio</a>
+            <a href="#experiencias" class="block py-2 text-base font-medium text-gray-700">Experiencias</a>
+            <a href="#servicios" class="block py-2 text-base font-medium text-gray-700">Servicios</a>
+            <a href="#contacto" class="block py-2 text-base font-medium text-blue-900 font-bold underline">Reservar</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero-gradient h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">Reconecta con la Naturaleza</h1>
+            <p class="text-xl md:text-2xl mb-10 font-light max-w-2xl mx-auto drop-shadow-md">
+                Un santuario de tranquilidad donde el lujo se encuentra con el entorno más puro del Caribe.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#experiencias" class="bg-white text-blue-900 px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-gray-100 transition shadow-xl">Explorar</a>
+                <a href="#video" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white/10 transition backdrop-blur-sm">
+                    <i class="fas fa-play mr-2"></i> Ver Video
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Experiencias -->
+    <section id="experiencias" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-amber-600 font-bold uppercase tracking-[0.3em] text-sm">Aventuras Inolvidables</span>
+            <h2 class="text-4xl md:text-5xl mt-4 text-blue-900">Experiencias Exclusivas</h2>
+            <div class="w-20 h-1 bg-amber-500 mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="card-hover transition-all duration-300 rounded-2xl overflow-hidden bg-white shadow-md">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Playa Paraíso" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl mb-3 text-blue-900 font-semibold">Playas Privadas</h3>
+                    <p class="text-gray-600 mb-6 font-light">Disfruta de kilómetros de arena blanca y aguas cristalinas reservadas solo para ti y tus seres queridos.</p>
+                    <a href="#" class="text-amber-600 font-bold text-sm uppercase tracking-widest hover:text-amber-700">Ver más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card-hover transition-all duration-300 rounded-2xl overflow-hidden bg-white shadow-md">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1510333302329-1332997602ad?auto=format&fit=crop&w=800&q=80" alt="Spa" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl mb-3 text-blue-900 font-semibold">Wellness & Spa</h3>
+                    <p class="text-gray-600 mb-6 font-light">Renueva tu energía con tratamientos holísticos inspirados en rituales ancestrales y aceites naturales.</p>
+                    <a href="#" class="text-amber-600 font-bold text-sm uppercase tracking-widest hover:text-amber-700">Ver más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-hover transition-all duration-300 rounded-2xl overflow-hidden bg-white shadow-md">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Gastronomía" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl mb-3 text-blue-900 font-semibold">Alta Gastronomía</h3>
+                    <p class="text-gray-600 mb-6 font-light">Un viaje culinario del mar a la mesa, maridado con los mejores vinos y una vista insuperable.</p>
+                    <a href="#" class="text-amber-600 font-bold text-sm uppercase tracking-widest hover:text-amber-700">Ver más <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Información (Stats) -->
+    <section class="bg-blue-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-4xl font-bold mb-2">150+</p>
+                <p class="text-blue-200 text-sm uppercase tracking-widest">Suites de Lujo</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold mb-2">5</p>
+                <p class="text-blue-200 text-sm uppercase tracking-widest">Restaurantes</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold mb-2">24/7</p>
+                <p class="text-blue-200 text-sm uppercase tracking-widest">Servicio Personal</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold mb-2">4.9</p>
+                <p class="text-blue-200 text-sm uppercase tracking-widest">Rating de Huéspedes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 bg-blue-900 text-white flex flex-col justify-center">
+                    <h2 class="text-4xl mb-6">Comienza tu viaje hoy mismo</h2>
+                    <p class="text-lg text-blue-100 mb-8 font-light">Envíanos un mensaje y uno de nuestros asesores personales se encargará de diseñar la estancia perfecta para ti.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt w-10 text-amber-500"></i>
+                            <span>+1 800 123 4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope w-10 text-amber-500"></i>
+                            <span>reservas@paraisoazul.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt w-10 text-amber-500"></i>
+                            <span>Bahía del Sol, Costa Serena, Caribe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 p-12">
+                    <form id="booking-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition" placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Fecha Estimada</label>
+                            <input type="date" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Mensaje</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition" placeholder="¿Tienes algún requerimiento especial?"></textarea>
+                        </div>
+                        <button type="button" onclick="handleSubmit()" class="w-full bg-amber-600 text-white font-bold py-4 rounded-xl hover:bg-amber-700 transition shadow-lg uppercase tracking-widest">
+                            Consultar Disponibilidad
+                        </button>
+                    </form>
+                    <div id="success-msg" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-xl text-center border border-green-200">
+                        ¡Mensaje enviado con éxito! Nos contactaremos pronto.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-1">
+                <span class="text-2xl font-bold tracking-tighter italic text-blue-400">PARAÍSO AZUL</span>
+                <p class="mt-6 text-gray-400 font-light leading-relaxed">
+                    Elevando la experiencia del turismo de lujo a través de la sostenibilidad y el servicio impecable.
+                </p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
+                <ul class="space-y-4 text-gray-400 font-light">
+                    <li><a href="#" class="hover:text-white transition">Habitaciones</a></li>
+                    <li><a href="#" class="hover:text-white transition">Actividades</a></li>
+                    <li><a href="#" class="hover:text-white transition">Paquetes</a></li>
+                    <li><a href="#" class="hover:text-white transition">Sostenibilidad</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Información</h4>
+                <ul class="space-y-4 text-gray-400 font-light">
+                    <li><a href="#" class="hover:text-white transition">Políticas de Cancelación</a></li>
+                    <li><a href="#" class="hover:text-white transition">Preguntas Frecuentes</a></li>
+                    <li><a href="#" class="hover:text-white transition">Términos y Condiciones</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacidad</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Boletín Informativo</h4>
+                <p class="text-gray-400 mb-4 font-light text-sm">Suscríbete para recibir ofertas exclusivas.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Email" class="bg-gray-800 border-none px-4 py-2 w-full rounded-l-lg outline-none">
+                    <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700 transition"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 border-t border-gray-800 pt-8 text-center text-gray-500 text-sm font-light">
+            &copy; 2024 Paraíso Azul Luxury Resort. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Toggle menú móvil
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Simulación de envío de formulario
+        function handleSubmit() {
+            const form = document.getElementById('booking-form');
+            const success = document.getElementById('success-msg');
+            
+            // Animación simple
+            form.style.opacity = '0.5';
+            form.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+            }, 1000);
+        }
+
+        // Efecto scroll para el navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
