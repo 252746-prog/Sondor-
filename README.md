@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machu Picchu - La Ciudad Perdida de los Incas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+        }
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        #image-container img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 0 0 50px 50px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden">
+        <div id="image-container" class="relative">
+            <div id="hero-image-placeholder" class="w-full h-[600px] bg-gray-200 animate-pulse flex items-center justify-center">
+                <p class="text-gray-500">Cargando la maravilla del mundo...</p>
+            </div>
+            <div class="absolute inset-0 hero-gradient flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-white text-5xl md:text-7xl font-800 mb-4 animate-fade-in drop-shadow-2xl">MACHU PICCHU</h1>
+                <p class="text-white text-xl md:text-2xl mb-8 max-w-2xl font-light">Vive la magia de los Incas en el corazón de los Andes peruanos.</p>
+                <a href="#contacto" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 shadow-xl">
+                    EMPEZAR MI AVENTURA
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Información Principal -->
+    <section class="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-3 gap-8 -mt-20 relative z-10">
+        <div class="glass-card p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition">
+            <div class="text-4xl mb-4">🏔️</div>
+            <h3 class="text-xl font-bold mb-2">Maravilla del Mundo</h3>
+            <p class="text-gray-600">Reconocida globalmente por su impresionante arquitectura y entorno natural único.</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition">
+            <div class="text-4xl mb-4">☀️</div>
+            <h3 class="text-xl font-bold mb-2">Energía Ancestral</h3>
+            <p class="text-gray-600">Siente la conexión espiritual en cada piedra y rincón de esta ciudad sagrada.</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition">
+            <div class="text-4xl mb-4">📷</div>
+            <h3 class="text-xl font-bold mb-2">Vistas Únicas</h3>
+            <p class="text-gray-600">Capta los mejores amaneceres y paisajes que solo los Andes pueden ofrecerte.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Experiencia -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-6 text-gray-800">Descubre el Santuario Histórico</h2>
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    Ubicada a 2,430 metros sobre el nivel del mar, Machu Picchu es una obra maestra de ingeniería y arquitectura. Explorarás sus templos, andenerías y la famosa Intihuatana mientras te rodeas de la exuberante selva alta del Cusco.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-gray-700">
+                        <span class="mr-2 text-green-500">✔</span> Guías expertos bilingües
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <span class="mr-2 text-green-500">✔</span> Traslados exclusivos en tren
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <span class="mr-2 text-green-500">✔</span> Experiencia cultural auténtica
+                    </li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 rounded-3xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition duration-500">
+                <div id="secondary-image-placeholder" class="w-full h-96 bg-gray-200 flex items-center justify-center">
+                    <p class="text-gray-400 italic">Generando vista detallada...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto / CTA -->
+    <section id="contacto" class="bg-slate-900 py-20 px-4 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4 italic">¿Estás listo para el viaje de tu vida?</h2>
+            <p class="text-slate-400 mb-10 text-lg">Déjanos tus datos y un asesor te contactará para planificar tu visita al Cusco y Machu Picchu.</p>
+            
+            <form id="booking-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" placeholder="Tu nombre" class="p-4 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-yellow-500 transition">
+                <input type="email" placeholder="Tu correo electrónico" class="p-4 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-yellow-500 transition">
+                <button type="submit" class="md:col-span-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-lg transition duration-300">
+                    RECIBIR INFORMACIÓN GRATIS
+                </button>
+            </form>
+            <p id="success-msg" class="hidden mt-4 text-green-400 font-bold">¡Gracias! Te contactaremos pronto.</p>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-gray-500 text-sm">
+        <p>© 2025 Centro Turístico Machu Picchu. Cusco, Perú.</p>
+    </footer>
+
+    <script>
+        const apiKey = ""; // API Key se inyecta en tiempo de ejecución
+
+        async function generateImage(prompt, elementId) {
+            const container = document.getElementById(elementId);
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        instances: [{ prompt: prompt }],
+                        parameters: { sampleCount: 1 }
+                    })
+                });
+
+                if (!response.ok) throw new Error('Error al generar imagen');
+                
+                const result = await response.json();
+                const imageUrl = `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
+                
+                container.innerHTML = `<img src="${imageUrl}" alt="Machu Picchu real" class="w-full h-full object-cover">`;
+            } catch (error) {
+                console.error('Error:', error);
+                container.innerHTML = `<div class="p-4 text-center">No se pudo cargar la imagen real. <br> Intenta recargar.</div>`;
+            }
+        }
+
+        window.onload = () => {
+            // Imagen principal de la ciudadela
+            generateImage("Professional photography of Machu Picchu ruins, Huayna Picchu mountain in the background, sunny day, sharp details, cinematic lighting, 8k", "hero-image-placeholder");
+            
+            // Imagen secundaria de las terrazas o una llama
+            generateImage("Close up of an Inca wall and green terraces in Machu Picchu, Peru, ancient stones, misty morning atmosphere", "secondary-image-placeholder");
+        };
+
+        // Simulación de formulario
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('booking-form').classList.add('hidden');
+            document.getElementById('success-msg').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
